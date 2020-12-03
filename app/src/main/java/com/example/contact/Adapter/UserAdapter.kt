@@ -50,9 +50,12 @@ class UserAdapter: RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
     override fun getItemCount() = userList.size
 
+    fun getUserAt(position: Int): User {
+        return userList.get(position)
+    }
+
     fun setData(user: List<User>){
         this.userList = user
         notifyDataSetChanged()
     }
-
 }

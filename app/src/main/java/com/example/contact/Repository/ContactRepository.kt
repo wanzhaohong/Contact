@@ -12,4 +12,8 @@ class ContactRepository(private val userDAO: UserDAO) {
         userDAO.addUser(user)
     }
 
+    fun deleteUser(user: User){
+        userDAO.deleteUser(user)
+    }
+
 }
